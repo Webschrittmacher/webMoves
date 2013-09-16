@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#madeWith {
+    min-width: 500px;
+    min-height: 500px;
+    z-index: 106;
+}
+
+#madeWithPopup {
+    position: relative !important;
+    top: 150px !important;
+    left: 30% !important;
+    max-width: 40%;
+    max-height:30%;
+}
+
+#authButton {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    z-index: 9;
+    min-width: 750px;
+    min-height: 450px;
+    background: url("../images/move.png") no-repeat;
+}
+
+#authButton:hover {
+    background: url("../images/moveMouseOver.png") no-repeat;
+}
+
+.modal-backdrop{
+    z-index:50;
+}
+
+
+
+#navButton {
+    position: absolute;
+    top: 27%;
+    left: 40%;
+    z-index: 5;
+}
+
+#navButton button {
+    background-color: transparent !important;
+    border-color: #666666 !important;
+}
+
+#mapCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+}
