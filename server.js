@@ -26,8 +26,13 @@ requirejs.config({
  * jvt: web-moves app bootstrap
  *
  * */
-var webMovesApp = requirejs(['webMoves/app'], function(webMovesApp)
+
+define('backbone', function()
 {
-    var _hund = Backbone.Model.extend({});
+    return Backbone;
+});
+
+requirejs(['webMoves/app'], function(webMovesApp)
+{
     webMovesApp.init(expressApp);
 });

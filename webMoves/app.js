@@ -1,5 +1,7 @@
-define('webMoves/app', function()
+define('webMoves/app', ['backbone'], function()
 {
+    var privateBalls = 'hund';
+
     return {
         init: function(expressApp)
         {
