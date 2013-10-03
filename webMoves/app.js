@@ -9,8 +9,6 @@ define('webMoves/app', ['backbone'], function()
             {
                 require('webMoves/controller/index').render(req, res);
             });
-
-            expressApp.get('/backbone/', function(req, res) { new (require('webMoves/controller/backboneTest')(req, res)) });
         }
     };
 });

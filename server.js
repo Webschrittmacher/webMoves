@@ -35,14 +35,6 @@ requirejs.config({
 });
 
 /**
- * jvt: shims
- */
-/*define('jade', function()
-{
-    return require('jade');
-});*/
-
-/**
  * jvt: web-moves app bootstrap
  *
  * */
