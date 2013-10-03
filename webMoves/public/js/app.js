@@ -3,11 +3,10 @@ define('app', function()
     return {
         init: function()
         {
-            /*new require(['views/webMovesView'])({
-                model: new require(['models/webMovesModel'])({
-                    hund: 'woof'
-                })
-            });*/
+            require(['gmap'], function(gmap)
+            {
+                gmap.init();
+            });
 
             var webMovesModel;
             require(['models/webMovesModel'], function(MainModel)
