@@ -1,3 +1,4 @@
+var config = require("./config.json");
 var http = require("http");
 var socket = require('socket.io');
 var express = require("express");
@@ -6,12 +7,12 @@ var Backbone = require("backbone");
 var expressApp = express();
 expressApp.configure(function()
 {
-    expressApp.use( express.static(__dirname + '/public'));
+    expressApp.use( express.static(__dirname + config.server.publicDir));
 });
 
 var server = http.createServer(expressApp);
 var sio = socket.listen(server);
-server.listen(8842);
+server.listen(config.server.port);
 
 /**
  * jvt: requirejs config
@@ -20,18 +21,13 @@ server.listen(8842);
 var requirejs = require('requirejs');
 requirejs.config({
     nodeRequire: require
+    //, baseUrl: __dirname + config.app.basePath
 });
 
 /**
  * jvt: web-moves app bootstrap
  *
  * */
-
-define('backbone', function()
-{
-    return Backbone;
-});
-
 requirejs(['webMoves/app'], function(webMovesApp)
 {
     webMovesApp.init(expressApp);

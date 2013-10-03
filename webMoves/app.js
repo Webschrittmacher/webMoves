@@ -7,8 +7,7 @@ define('webMoves/app', ['backbone'], function()
         {
             expressApp.get('/', function(req, res)
             {
-                res.write('hund');
-                res.end();
+                require('webMoves/controller/index').render(req, res);
             });
 
             expressApp.get('/backbone/', function(req, res) { new (require('webMoves/controller/backboneTest')(req, res)) });

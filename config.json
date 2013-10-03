@@ -1,0 +1,10 @@
+{
+    "server": {
+        "port": 8842
+        , "publicDir": "/public"
+    }
+    , "app": {
+        "name": "webMoves"
+        , "basePath": "/webMoves"
+    }
+}
