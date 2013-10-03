@@ -6,8 +6,8 @@ $(document).ready(function()
                             + "authorize?response_type=code&"
                             + "client_id=9z08yZSF2QRdLBms2akHYAR9O8wSLh8X&"
                             + "scope=activity location";
-        var newwindow=window.open(sUrl,'name','height=500,width=450');
-        if (window.focus) {newwindow.focus()}
+        var newWindow=window.open(sUrl,'name','height=500,width=450');
+        if (window.focus) {newWindow.focus()}
             this.hide();
     });
 
