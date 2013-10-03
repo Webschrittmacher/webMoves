@@ -1,9 +1,8 @@
-define('webMoves/controller/index', function()
+define('webMoves/controller/index', ['jade'], function(jade)
 {
     return {
         render: function(req, res)
         {
-            var jade = require('jade');
             res.write(jade.renderFile('webMoves/views/index.jade'));
             res.end();
         }
