@@ -28,5 +28,10 @@ define('log', function()
         {
             handle('error', arguments);
         }
+
+        , debug: function()
+        {
+            handle('debug', arguments);
+        }
     }
 });
