@@ -1,20 +1,17 @@
-define('app', function()
+define('app'
+    , ['modules/core', 'gmap', 'modules/user', 'modules/channels']
+    , function(Core, GMap, User, Channels)
 {
     var currentUser;
 
     return {
         init: function()
         {
-            require(['gmap'], function(gmap)
-            {
-                gmap.init();
-            });
+            GMap.init();
 
-            require(['modules/user'], function(UserModule)
-            {
-                // jvt: @todo bootstrap user module?
-                currentUser = UserModule.detect(); // jvt: init and store current user @todo instance needed at app level?
-            });
+            currentUser = User.detect(); // jvt: init and store current user @todo instance needed at app level?
+
+            Channels.init();
         }
     }
 });

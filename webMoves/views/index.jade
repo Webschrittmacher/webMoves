@@ -19,8 +19,12 @@ head
 
         title webMoves
     body
+        div(id='channels' class='overlay')
+            h1 add channels
+            p
+                a(class='moves') moves
         div(id='mapCanvas')
-        a(id='authButton' data-toggle='modal')
+        a(id='authButton' class='overlay' data-toggle='modal')
         div(id='navButton' class='btn-group dopup')
             button(type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown')
                 Menu
