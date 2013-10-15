@@ -1,5 +1,7 @@
 define('app', function()
 {
+    var currentUser;
+
     return {
         init: function()
         {
@@ -8,17 +10,10 @@ define('app', function()
                 gmap.init();
             });
 
-            var webMovesModel;
-            require(['models/webMovesModel'], function(MainModel)
+            require(['modules/user'], function(UserModule)
             {
-                webMovesModel = new MainModel();
-            });
-
-            require(['views/webMovesView'], function(MainView)
-            {
-                new MainView({
-                    model: webMovesModel
-                });
+                // jvt: @todo bootstrap user module?
+                currentUser = UserModule.detect(); // jvt: init and store current user @todo instance needed at app level?
             });
         }
     }

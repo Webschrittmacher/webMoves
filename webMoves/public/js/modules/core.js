@@ -1,4 +1,4 @@
-define('webMoves/modules/core', function()
+define('modules/core', function()
 {
     return {};
 });

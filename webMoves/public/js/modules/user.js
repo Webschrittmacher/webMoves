@@ -1,8 +1,10 @@
-define('webMoves/modules/user', ['webMoves/modules/core'], function(Core)
+define('modules/user', ['modules/core', 'models/user'], function(Core, UserModel)
 {
     return {
-        init: function()
+        detect: function()
         {
+            // jvt: @todo detect user (cookie, bla, etc.) and init model
+            return new UserModel();
         }
     };
 });

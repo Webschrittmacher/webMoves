@@ -1,4 +1,4 @@
-define('webMoves/modules/channels', ['webMoves/modules/core'], function(Core)
+define('modules/channels', ['modules/core'], function(Core)
 {
     return {
         init: function()

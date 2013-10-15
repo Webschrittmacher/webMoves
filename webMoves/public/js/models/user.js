@@ -1,8 +1,8 @@
-define('models/webMovesModel', function()
+define('models/user', function()
 {
     return Backbone.Model.extend({
         defaults: {
-            hund: 'katze'
+            name: 'Hund'
         }
 
         , initialize: function()
