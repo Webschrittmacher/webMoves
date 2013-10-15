@@ -6,14 +6,23 @@
  *
  */
 
-define('modules/core', ['jquery'], function($)
+define('modules/core', ['jquery', 'underscore'], function($, _)
 {
-    var pubsubhub = $({});
+    var pubsubhub = $({})
+        , actions = {}
+    ;
 
     return {
+        init: function() {}
+
+        // jvt: actions repository
+        , registerActions: function(oActionsHash)
+        {
+
+        }
 
         // jvt: pubsub
-        subscribe: function()
+        , subscribe: function()
         {
             pubsubhub.on.apply(pubsubhub, arguments);
         }

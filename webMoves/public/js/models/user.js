@@ -1,4 +1,4 @@
-define('models/user', function()
+define('models/user', ['backbone'], function(Backbone)
 {
     return Backbone.Model.extend({
         defaults: {

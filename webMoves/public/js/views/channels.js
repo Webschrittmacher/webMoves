@@ -1,4 +1,4 @@
-define('views/channels', function()
+define('views/channels', ['backbone'], function(Backbone)
 {
     return Backbone.View.extend({
         el: '#channels'

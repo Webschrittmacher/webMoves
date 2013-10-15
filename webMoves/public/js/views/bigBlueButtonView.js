@@ -1,4 +1,4 @@
-define('views/bigBlueButtonView', function()
+define('views/bigBlueButtonView', ['backbone'], function(Backbone)
 {
     return Backbone.View.extend({
         el: '#authButton'
