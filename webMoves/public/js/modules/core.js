@@ -6,7 +6,7 @@
  *
  */
 
-define('modules/core', ['jquery', 'underscore'], function($, _)
+define('modules/core', ['jquery', 'underscore', 'log'], function($, _, Log)
 {
     var pubsubhub = $({})
         , actions = {}
@@ -18,7 +18,21 @@ define('modules/core', ['jquery', 'underscore'], function($, _)
         // jvt: actions repository
         , registerActions: function(oActionsHash)
         {
+            for(var _sActionName in oActionsHash)
+            {
+                actions[_sActionName] = oActionsHash[_sActionName];
+            }
+        }
 
+        , getAction: function(sName)
+        {
+            if('undefined' == typeof actions[sName])
+            {
+                Log.error('unknown action! ' + sName);
+                return false;
+            }
+
+            return actions[sName];
         }
 
         // jvt: pubsub
